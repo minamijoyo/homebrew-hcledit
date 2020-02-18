@@ -2,16 +2,16 @@
 class Hcledit < Formula
   desc "A stream editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.0.1-alpha5"
+  version "0.0.1-alpha6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/minamijoyo/hcledit/releases/download/v0.0.1-alpha5/hcledit_0.0.1-alpha5_darwin_amd64.tar.gz"
-    sha256 "d878afc456731f2b563fc1487e6dcf8c1642df23bf2bf2023769a7364990c973"
+    url "https://github.com/minamijoyo/hcledit/releases/download/v0.0.1-alpha6/hcledit_0.0.1-alpha6_darwin_amd64.tar.gz"
+    sha256 "0a4e837547034a31f23d7b1fb5a4e09e58dcc3603077274012815ef334797ae8"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.0.1-alpha5/hcledit_0.0.1-alpha5_linux_amd64.tar.gz"
-      sha256 "7c091a503d7304cd7acc6036dfb6c3ecaa22bc4dc0e2fe23a2877550d34b27cb"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.0.1-alpha6/hcledit_0.0.1-alpha6_linux_amd64.tar.gz"
+      sha256 "423c98acf4d490387aa8650850a1015bbb77f3b66d0b4efacb39f11b0d240265"
     end
   end
 
