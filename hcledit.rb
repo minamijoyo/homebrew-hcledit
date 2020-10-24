@@ -2,16 +2,16 @@
 class Hcledit < Formula
   desc "A command line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.1.0"
+  version "0.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/minamijoyo/hcledit/releases/download/v0.1.0/hcledit_0.1.0_darwin_amd64.tar.gz"
-    sha256 "0d20f704aef185349a5311527805572a4391e7384f9ae2a3ccb371978d44e455"
+    url "https://github.com/minamijoyo/hcledit/releases/download/v0.1.1/hcledit_0.1.1_darwin_amd64.tar.gz"
+    sha256 "5acca90d2d49811cdcb3d503ed6974b382e4a8832587f5f1cc62fb273859aea6"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.1.0/hcledit_0.1.0_linux_amd64.tar.gz"
-      sha256 "fa3aaf9f6950c650cdea8cd38ef4fc19a7b46fd3a34db1e85f4cdaa7cf0406e2"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.1.1/hcledit_0.1.1_linux_amd64.tar.gz"
+      sha256 "598d18066d2cb7059804922674e5dd53babc7660aa70ebce5ee4e15973db8c05"
     end
   end
 
