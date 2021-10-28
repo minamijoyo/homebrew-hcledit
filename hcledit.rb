@@ -5,20 +5,28 @@
 class Hcledit < Formula
   desc "A command line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.2.0"
-  bottle :unneeded
+  version "0.2.1"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.0/hcledit_0.2.0_darwin_amd64.tar.gz"
-    sha256 "7d1e860a2bec7f7055b1d5bcd458dca19a3bdf50f523ab14dcc99dbb0ba000d5"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.0/hcledit_0.2.0_linux_amd64.tar.gz"
-    sha256 "d86dbe21206f1467ac285a83840406854dde2f4fe00bac65d969e0ac7fb4ac0c"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.1/hcledit_0.2.1_darwin_amd64.tar.gz"
+      sha256 "804ccc74fd847763309cf9ce42cfd86f16a694e16e275ab5e36229b46d47bfda"
+
+      def install
+        bin.install "hcledit"
+      end
+    end
   end
 
-  def install
-    bin.install "hcledit"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.1/hcledit_0.2.1_linux_amd64.tar.gz"
+      sha256 "9d13bdcefc49f8f9be1577434ba2a25dd16925f0f4b7662e228e3c4d356b98d1"
+
+      def install
+        bin.install "hcledit"
+      end
+    end
   end
 
   test do
