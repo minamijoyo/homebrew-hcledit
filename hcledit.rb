@@ -5,12 +5,20 @@
 class Hcledit < Formula
   desc "A command line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.1/hcledit_0.2.1_darwin_amd64.tar.gz"
-      sha256 "804ccc74fd847763309cf9ce42cfd86f16a694e16e275ab5e36229b46d47bfda"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_darwin_amd64.tar.gz"
+      sha256 "68c8844d147db8954007bdd779bb3da49141e821a962882a3761fb3cb7255bdf"
+
+      def install
+        bin.install "hcledit"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_darwin_arm64.tar.gz"
+      sha256 "54e6dedddb0164f08d97f959c838f991ed3cf155d887ac85a7f254d84deb810d"
 
       def install
         bin.install "hcledit"
@@ -20,8 +28,16 @@ class Hcledit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.1/hcledit_0.2.1_linux_amd64.tar.gz"
-      sha256 "9d13bdcefc49f8f9be1577434ba2a25dd16925f0f4b7662e228e3c4d356b98d1"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_linux_amd64.tar.gz"
+      sha256 "50ca624bf453eddaa7cc2f75f25eaf17c54aabff6a7312cf4fd0774b11350a51"
+
+      def install
+        bin.install "hcledit"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_linux_arm64.tar.gz"
+      sha256 "c9668745d39f8532568b8a3c5791bbe834fd1ac8d7831dd766e800621aefd464"
 
       def install
         bin.install "hcledit"
