@@ -5,20 +5,20 @@
 class Hcledit < Formula
   desc "A command line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_darwin_amd64.tar.gz"
-      sha256 "68c8844d147db8954007bdd779bb3da49141e821a962882a3761fb3cb7255bdf"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_darwin_amd64.tar.gz"
+      sha256 "6a92579b28dc758f8c664a097ec2852652046954fab6f32ab7603ecab06f9cf4"
 
       def install
         bin.install "hcledit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_darwin_arm64.tar.gz"
-      sha256 "54e6dedddb0164f08d97f959c838f991ed3cf155d887ac85a7f254d84deb810d"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_darwin_arm64.tar.gz"
+      sha256 "24dcead4c778b50e95c064e24cd0176b47cd9d49f3e5d15dc1a6ee970630051a"
 
       def install
         bin.install "hcledit"
@@ -28,16 +28,16 @@ class Hcledit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_linux_amd64.tar.gz"
-      sha256 "50ca624bf453eddaa7cc2f75f25eaf17c54aabff6a7312cf4fd0774b11350a51"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_linux_amd64.tar.gz"
+      sha256 "37ade5ee0e782b9f08a78898463108d5029b80dad4720912eacedb248de4a3eb"
 
       def install
         bin.install "hcledit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.2/hcledit_0.2.2_linux_arm64.tar.gz"
-      sha256 "c9668745d39f8532568b8a3c5791bbe834fd1ac8d7831dd766e800621aefd464"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_linux_arm64.tar.gz"
+      sha256 "dd2b3dbfab527a4e5594cb0ea7e13d9f67326033cc0b33173f9a39bf5f0f74c4"
 
       def install
         bin.install "hcledit"
