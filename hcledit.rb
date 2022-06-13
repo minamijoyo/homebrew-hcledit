@@ -5,20 +5,20 @@
 class Hcledit < Formula
   desc "A command line editor for HCL"
   homepage "https://github.com/minamijoyo/hcledit"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_darwin_amd64.tar.gz"
-      sha256 "6a92579b28dc758f8c664a097ec2852652046954fab6f32ab7603ecab06f9cf4"
+    if Hardware::CPU.arm?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.4/hcledit_0.2.4_darwin_arm64.tar.gz"
+      sha256 "f04569721b9989a28e3fab31ef5183c4d175e1bc4cc2de2b852339af08c3a8b7"
 
       def install
         bin.install "hcledit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_darwin_arm64.tar.gz"
-      sha256 "24dcead4c778b50e95c064e24cd0176b47cd9d49f3e5d15dc1a6ee970630051a"
+    if Hardware::CPU.intel?
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.4/hcledit_0.2.4_darwin_amd64.tar.gz"
+      sha256 "f5af4e808e9f6a8163f0c57fa7991cad62815fee7bd9de282413a46d06a9cb46"
 
       def install
         bin.install "hcledit"
@@ -28,16 +28,16 @@ class Hcledit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_linux_amd64.tar.gz"
-      sha256 "37ade5ee0e782b9f08a78898463108d5029b80dad4720912eacedb248de4a3eb"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.4/hcledit_0.2.4_linux_amd64.tar.gz"
+      sha256 "372749b1cdd5a7eb63444b53dc28c7193c2ee06154751da88c6ec2432b0c8cdb"
 
       def install
         bin.install "hcledit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.3/hcledit_0.2.3_linux_arm64.tar.gz"
-      sha256 "dd2b3dbfab527a4e5594cb0ea7e13d9f67326033cc0b33173f9a39bf5f0f74c4"
+      url "https://github.com/minamijoyo/hcledit/releases/download/v0.2.4/hcledit_0.2.4_linux_arm64.tar.gz"
+      sha256 "5e1beef06ef645af6ce532dacc4b1e188eb2a6474ad1d76052a512a97b644d4f"
 
       def install
         bin.install "hcledit"
